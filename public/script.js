@@ -162,7 +162,7 @@ function showFindDonors(filteredDonors, district, bloodType) {
     return;
   }
 
-  resultDiv.innerHTML = "<h3>Donors:</h3>";
+  resultDiv.innerHTML = "<h3>Available Donors:</h3>";
 
   let text = "";
   filteredDonors.forEach(({ fullName, date, bloodType, contact }) => {
