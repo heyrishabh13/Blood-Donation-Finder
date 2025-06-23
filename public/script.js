@@ -139,21 +139,17 @@ document.getElementById("find-form").addEventListener("submit", (event) => {
 
     const filteredDonors = donors.filter((donor) => {
       if (
-        donor.district.toLowerCase() === district &&
+        donor.district === district &&
         donor.bloodType === bloodType &&
         donor.contact === contact
       ) {
         return donor;
-      } else if (
-        donor.district.toLowerCase() === district &&
-        donor.bloodType === bloodType
-      ) {
+      } else if (donor.district === district && donor.bloodType === bloodType) {
         return donor;
       }
     });
     showFindDonors(filteredDonors, district, bloodType);
 
-    document.getElementById("find-form").reset();
     console.log("find donors array", filteredDonors);
   });
 });
@@ -166,9 +162,12 @@ function showFindDonors(filteredDonors, district, bloodType) {
     return;
   }
 
+  resultDiv.innerHTML = "<h3>Donors:</h3>";
+
   let text = "";
   filteredDonors.forEach(({ fullName, date, bloodType, contact }) => {
-    text = `<div><div><p><span class="bold">${fullName}</span> | ${bloodType}</p>
+    text = `<div>
+                <div><p><span class="bold">${fullName}</span> | ${bloodType}</p>
                     <p>Last Donated: ${date.split("-").reverse().join("-")}</p>
                 </div>
                 <div class="icons"><img src="images/002-call.png" alt="call image"/>
