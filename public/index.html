@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Blood Donor Finder</title>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="#" onclick="showSection('home')" class="active">Home</a>
+      <a href="#" onclick="showSection('register')">Register</a>
+      <a href="#" onclick="showSection('find')">Find Donor</a>
+      <a href="#" onclick="showSection('settings')">Settings</a>
+      <a href="#" onclick="showSection('profile')">Profile</a>
+      <a href="#" onclick="showSection('notifications')">Notifications</a>
+    </div>
+
+    <div id="home" class="section active">
+      <h1>Blood Donor Finder</h1>
+      <input
+        type="text"
+        placeholder="Search by location, blood type..."
+        style="width: 200px; padding: 5px"
+      />
+      <select>
+        <option value="available">Available</option>
+        <option value="unavailable">Unavailable</option>
+      </select>
+      <p>Navigate: Home, Settings, Profile, Notifications</p>
+    </div>
+
+    <div id="register" class="section">
+      <div class="register-content">
+        <h2>Donor Registration</h2>
+        <form id="donorForm">
+          <label>Full Name:</label
+          ><input id="fullName" type="text" name="fullName" required />
+          <label>Age:</label
+          ><input
+            type="number"
+            id="age"
+            name="age"
+            min="18"
+            max="65"
+            required
+          />
+          <label>Gender:</label
+          ><select name="gender" id="gender" required>
+            <option value="" disabled>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <label>Blood Type:</label
+          ><select name="bloodType" id="bloodType" required>
+            <option value="" selected disabled>Select Blood Type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+          <label>Contact Info:</label
+          ><input
+            type="text"
+            name="contact"
+            id="contact"
+            placeholder="Phone or email"
+            required
+          />
+          <label>District:</label
+          ><select name="district" id="district" required>
+            <option value="" selected disabled>Select District</option>
+            <option value="Agra">Agra</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Rampur">Rampur</option>
+            <option value="Moradabad">Moradabad</option>
+            <option value="Barielly">Barielly</option>
+            <option value="Varanasi">Varanasi</option>
+            <option value="Bijnor">Bijnor</option>
+            <!-- Add more UP districts as needed -->
+          </select>
+          <label>Pincode:</label
+          ><input
+            type="number"
+            name="pincode"
+            maxlength="6"
+            id="pincode"
+            required
+          />
+          <label>Last Donated:</label
+          ><input type="date" id="date" name="lastDonated" required />
+          <label>Availability Status:</label
+          ><select name="availability" id="availability" required>
+            <option value="" selected disabled>Select Availability</option>
+            x`
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+          </select>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="find" class="section">
+      <div class="find-content">
+        <h2>Donor Finder</h2>
+        <form id="find-form">
+          <label>District:</label
+          ><select name="district" id="find-district" required>
+            <option value="" selected disabled>Select District</option>
+            <option value="agra">Agra</option>
+            <option value="lucknow">Lucknow</option>
+            <option value="rampur">Rampur</option>
+            <option value="moradabad">Moradabad</option>
+            <option value="barielly">Barielly</option>
+            <option value="varanasi">Varanasi</option>
+            <option value="bijnor">Bijnor</option>
+          </select>
+          <label>Blood Type:</label
+          ><select name="bloodType" id="find-blood" required>
+            <option value="" selected disabled>Select Blood Group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+          </select>
+          <label>Contact Info:</label
+          ><input
+            type="text"
+            name="contact"
+            placeholder="Optional"
+            id="contact-info"
+          />
+          <button type="submit">Request</button>
+        </form>
+        <div id="find-result"></div>
+      </div>
+    </div>
+
+    <div id="settings" class="section">
+      <h2>Settings</h2>
+      <p>Configure your preferences here (e.g., notification settings).</p>
+    </div>
+
+    <div id="profile" class="section">
+      <h2>Profile</h2>
+      <p>View your donor profile here.</p>
+      <div id="result"></div>
+    </div>
+
+    <div id="notifications" class="section">
+      <h2>Notifications</h2>
+      <p>Check your donation requests or updates here.</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
