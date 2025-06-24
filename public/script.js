@@ -158,7 +158,7 @@ function showFindDonors(filteredDonors, district, bloodType) {
   let resultDiv = document.getElementById("find-result");
 
   if (filteredDonors.length === 0) {
-    resultDiv.innerHTML = `<p>Currently no donor Available in District ${district} with Blood Type ${bloodType}!</p>`;
+    resultDiv.innerHTML = `<p>Currently no donor Available in District <span class="bold">${district}</span> with Blood Type <span class="bold">${bloodType}</span>!</p>`;
     return;
   }
 

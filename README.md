@@ -15,7 +15,6 @@ A web-based application designed to help users register as blood donors and find
 - **HTML**: For the structure of the web app.
 - **CSS**: For styling, including responsive design.
 - **JavaScript**: For dynamic functionality and form handling.
-- **Netlify**: For deployment and serverless functions to handle data.
 
 ## Prerequisites
 
@@ -23,7 +22,6 @@ A web-based application designed to help users register as blood donors and find
 - Git installed for version control.
 - Node.js (optional, for local testing with a server).
 - A GitHub account for hosting the repository.
-- A Netlify account for deployment (optional).
 
 ## Installation and Setup
 
