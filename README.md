@@ -1,6 +1,6 @@
 # Blood Donation Finder
 
-A web-based application designed to help users register as blood donors and find available donors based on location and blood type. This project is built as a learning exercise using HTML, CSS, JavaScript, and deployed with Netlify.
+A web-based application designed to help users register as blood donors and find available donors based on location and blood type. This project is built as a learning exercise using HTML, CSS, JavaScript.
 
 ## Features
 
