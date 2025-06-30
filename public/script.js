@@ -1,7 +1,7 @@
 let donors = [];
 
 function fetchDonors(callback) {
-  fetch("/get-donors")
+  fetch("/.netlify/functions/save-donor")
     .then((response) => response.json())
     .then((data) => {
       donors = data;
@@ -110,7 +110,7 @@ document
     console.log(formData);
 
     try {
-      const response = await fetch("/save-data", {
+      const response = await fetch("/.netlify/functions/save-donor", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
