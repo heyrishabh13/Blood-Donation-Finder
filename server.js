@@ -7,7 +7,8 @@ const port = 3000;
 app.use(express.json());
 app.use(express.static("public"));
 
-const dataFilePath = path.join(__dirname, "donors.json");
+const dataFilePath = path.join(__dirname, "public", "donors.json");
+console.log(dataFilePath);
 
 // Post request to save data to file
 app.post("/save-data", async (req, res) => {
